@@ -1,0 +1,24 @@
+# Node modules (필수)
+node_modules/
+
+# 환경 변수 파일 (DB 비밀번호 등 민감 정보)
+.env
+
+# 로그 파일들
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS에서 생성하는 파일들
+.DS_Store
+Thumbs.db
+
+# 빌드 결과물 (만약 빌드 프로세스가 있다면)
+dist/
+build/
+
+# IDE 설정 파일 (VSCode, WebStorm 등)
+.vscode/
+.idea/
