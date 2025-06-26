@@ -10,7 +10,7 @@ const rsvpRoutes = require("./routes/rsvpRoutes");
 app.use(cors()); // 다른 포트 간 통신 허용
 app.use(express.json()); // JSON 요청 파싱
 
-// 라라우터 연결
+// 라우터 연결
 app.use("/guestbook", guestbookRoutes);
 app.use("/rsvp", rsvpRoutes);
 
