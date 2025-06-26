@@ -5,6 +5,8 @@ const app = express();
 // 라우터 불러오기
 const guestbookRoutes = require("./routes/guestbookRoutes");
 const rsvpRoutes = require("./routes/rsvpRoutes");
+const qrcodeRoutes = require("./routes/qrcodeRoutes");
+const shareRoutes = require("./routes/shareRoutes");
 
 // 미들웨어 설정
 app.use(cors()); // 다른 포트 간 통신 허용
@@ -13,9 +15,11 @@ app.use(express.json()); // JSON 요청 파싱
 // 라우터 연결
 app.use("/guestbook", guestbookRoutes);
 app.use("/rsvp", rsvpRoutes);
+app.use("/qrcode", qrcodeRoutes);
+app.use("/share", shareRoutes);
 
 // 서버 실행
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`🚀 서버 실행됨: http://localhost:${PORT}`);
 });
